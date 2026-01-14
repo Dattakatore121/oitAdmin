@@ -1,0 +1,126 @@
+/* .sidebar {
+  padding: 20px;
+  color: white;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #cbd5f5;
+  border-radius: 6px;
+}
+
+.sidebar-link:hover {
+  background: #1e293b;
+}
+
+.sidebar-link.active {
+  background: #2563eb;
+  color: white;
+} */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #0f172a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #1e293b;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-nav {
+  padding: 20px 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  margin: 4px 16px;
+  text-decoration: none;
+  color: #cbd5f5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  gap: 12px;
+}
+
+.sidebar-link:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.sidebar-link.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.sidebar-link .icon {
+  font-size: 1.1rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    overflow-x: hidden;
+  }
+
+  .sidebar-logo {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sidebar-nav {
+    padding: 12px 0;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 12px;
+    margin: 4px 8px;
+    gap: 0;
+  }
+
+  .sidebar-link span.icon {
+    font-size: 1.2rem;
+  }
+
+  .sidebar-link span.text {
+    display: none;
+  }
+
+  .sidebar-link.active span.text {
+    display: inline;
+  }
+}

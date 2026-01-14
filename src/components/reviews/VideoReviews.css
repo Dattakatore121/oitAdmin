@@ -1,0 +1,114 @@
+/* Main container */
+.video-reviews {
+  padding: 20px;
+}
+
+/* Heading */
+.video-reviews h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Add button */
+.btn-add {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.btn-add:hover {
+  background: #1e40af;
+}
+
+/* Add form box */
+.add-form {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+/* Textarea */
+.add-form textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-form textarea:focus {
+  border-color: #2563eb;
+}
+
+/* Save button */
+.add-form button {
+  margin-top: 10px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-form button:hover {
+  background: #15803d;
+}
+
+/* Grid: 2 videos per row */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Video card */
+.video-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Iframe container */
+.iframe-box iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 6px;
+}
+
+/* Delete button */
+.btn-delete {
+  margin-top: 10px;
+  width: 100%;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+}
+
+/* Responsive: mobile */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}

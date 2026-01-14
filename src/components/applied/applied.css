@@ -1,0 +1,212 @@
+.applied-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.applied-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.applied-table th,
+.applied-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.applied-table th {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.applied-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Buttons */
+.btn-delete {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-view {
+  background: #198754;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #157347;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.cover-text {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.btn-close {
+  margin-top: 20px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Search input */
+.search-input {
+  width: 250px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+/* ================= RESPONSIVE FIX ================= */
+
+/* ---------- Tablet (<= 992px) ---------- */
+@media (max-width: 992px) {
+  .applied-container {
+    padding: 18px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Table scroll */
+  .applied-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ---------- Mobile (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .applied-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .applied-table th,
+  .applied-table td {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .btn-view,
+  .btn-delete {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  /* Modal */
+  .modal-box {
+    width: 90%;
+    padding: 18px;
+  }
+
+  .cover-text {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Mobile (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 18px;
+  }
+
+  .applied-table th,
+  .applied-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn-view,
+  .btn-delete {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  td:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .modal-box h3 {
+    font-size: 16px;
+  }
+
+  .btn-close {
+    width: 100%;
+  }
+}

@@ -1,0 +1,243 @@
+/* ================= CONTAINER ================= */
+.contact-admin-container {
+  padding: 20px;
+  background: #f4f6fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= TITLE ================= */
+.page-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* ================= FORM ================= */
+.contact-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  grid-column: span 2;
+  resize: none;
+  height: 70px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4a6cf7;
+}
+
+/* ================= BUTTON ================= */
+.save-btn {
+  grid-column: span 2;
+  padding: 11px;
+  background: #4a6cf7;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #3b5bdb;
+}
+
+.save-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-message {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 14px;
+  color: #2ecc71;
+}
+
+/* ================= TABLE ================= */
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-table th {
+  background: rgb(17, 10, 10);
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.contact-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #2c3e50;
+  border-bottom: 1px solid #eef0f5;
+}
+
+.contact-table tr:nth-child(even) {
+  background: #f9faff;
+}
+
+.contact-table tr:hover {
+  background: #eef3ff;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.contact-table td:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  background: #f1c40f;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #000;
+}
+
+.edit-btn:hover {
+  background: #d4ac0d;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form textarea,
+  .save-btn {
+    grid-column: span 1;
+  }
+
+  .contact-table {
+    font-size: 13px;
+  }
+}
+/* ================= RESPONSIVE FIXES ================= */
+
+/* ---------- Tablets (<= 992px) ---------- */
+@media (max-width: 992px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form textarea,
+  .save-btn {
+    grid-column: span 1;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Mobile (<= 600px) ---------- */
+@media (max-width: 600px) {
+  .contact-admin-container {
+    padding: 12px;
+  }
+
+  .page-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* 🔥 Table scroll instead of breaking */
+  .contact-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .contact-table th,
+  .contact-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* Buttons stack nicely */
+  .contact-table td:last-child {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+/* ---------- Very Small Devices (<= 400px) ---------- */
+@media (max-width: 400px) {
+  .page-title {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 12px;
+  }
+}
