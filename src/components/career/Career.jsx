@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Career.css";
+import "./career.css";
 
 const API = `${import.meta.env.VITE_API_BASE_URL}/api/careers`;
 const DOMAIN = localStorage.getItem("domain");
