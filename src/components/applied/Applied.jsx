@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Applied.css";
+import "./applied.css";
 
 const API = `${import.meta.env.VITE_API_BASE_URL}/api/applied`;
 
